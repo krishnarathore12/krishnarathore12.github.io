@@ -12,9 +12,9 @@ const posts: Record<string, {
     date: "January 17, 2026",
     content: `Today I created my website and this is my first blog!
 
-After spending time building out the terminal-inspired design and adding theme support, I'm finally ready to share my corner of the internet. This portfolio will serve as a home for my projects, thoughts, and experiments in tech.
+I'm finally ready to share my corner of the internet. This portfolio will serve as a home for my projects, thoughts, and experiments.
 
-Stay tuned for more posts about AI, full-stack development, and whatever else catches my interest.
+Stay tuned for more posts about tech, design and whatever else catches my interest.
 
 _end_of_transmission`,
   },
