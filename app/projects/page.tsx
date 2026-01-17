@@ -4,13 +4,15 @@ export default function Projects() {
       title: "Gloommy",
       tech: "Cross-Modal RAG, Gemini 2.5, Next.js",
       desc: "Pinterest for your AI. A platform enabling users to curate visual assets that actively guide the style and tone of new generations.",
-      link: "https://gloommy.vercel.app/", // Update if specific repo exists
+      link: "https://gloommy.vercel.app/",
+      github: "https://github.com/krishnarathore12/gloommy",
     },
     {
       title: "Manimator",
       tech: "Agno AGI, Qwen-3, FastAPI",
       desc: "Automated Manim animation generator. Converts prompts into executable mathematical animation code using multi-agent systems.",
       link: "https://manimator-alpha.vercel.app/",
+      github: "https://github.com/krishnarathore12/manimator",
     },
     {
       title: "M3C-TAC",
@@ -33,9 +35,16 @@ export default function Projects() {
               </span>
             </div>
             <p className="text-sm text-muted mb-4">{p.desc}</p>
-            <a href={p.link} target="_blank" className="project-link">
-              web link -&gt;
-            </a>
+            <div className="flex gap-4">
+              <a href={p.link} target="_blank" className="project-link">
+                web link -&gt;
+              </a>
+              {p.github && (
+                <a href={p.github} target="_blank" className="project-link">
+                  github -&gt;
+                </a>
+              )}
+            </div>
           </div>
         ))}
       </div>
