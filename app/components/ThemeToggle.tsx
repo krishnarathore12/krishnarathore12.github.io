@@ -6,6 +6,7 @@ import { useState, useRef, useEffect } from "react";
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
   const [isOpen, setIsOpen] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   const themes = [
@@ -14,6 +15,11 @@ export function ThemeToggle() {
   ];
 
   const currentTheme = themes.find((t) => t.id === theme) || themes[0];
+
+  // Wait for mount to avoid hydration mismatch
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Close dropdown when clicking outside
   useEffect(() => {
@@ -35,7 +41,7 @@ export function ThemeToggle() {
         aria-haspopup="listbox"
       >
         <span className="theme-prefix">theme:</span>
-        <span className="theme-value">{currentTheme.label}</span>
+        <span className="theme-value">{mounted ? currentTheme.label : "\u00A0\u00A0\u00A0\u00A0"}</span>
         <span className="theme-arrow">{isOpen ? "▲" : "▼"}</span>
       </button>
       
