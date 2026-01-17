@@ -3,6 +3,12 @@ import Link from "next/link";
 export default function Blog() {
   const posts = [
     {
+      slug: "but-what-after-agi",
+      title: "But What After AGI?",
+      date: "January 18, 2026",
+      excerpt: "My thoughts on the existential crisis around AI and what happens when every job is automated.",
+    },
+    {
       slug: "hello-world",
       title: "Hello World — My First Blog",
       date: "January 17, 2026",
